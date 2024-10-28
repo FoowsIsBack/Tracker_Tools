@@ -57,6 +57,18 @@ def monthcalendar():
     clear()
     main()
 
+def age():
+    print(f"""
+    \x1b[38:5:86m╔═════════════════════════════════════╗
+    \x1b[38;5;86m║        \x1b[38:5:120mWelcome to Age Tracker       \x1b[38;5;86m║ 
+    \x1b[38:5:86m╚═════════════════════════════════════╝""")
+    year = int(input("     \x1b[38:5:120mEnter Year of Today:\x1b[38:5:231m "))
+    birth = int(input("     \x1b[38:5:120mEnter your Birthyear:\x1b[38:5:231m "))
+    result = year - birth
+    time.sleep(1.5)
+    clear()
+    print(result)
+
 def main():
     clear()
     print(f""" 
@@ -65,8 +77,7 @@ def main():
     \x1b[38:5:86m╠═════════════════════════════════╣
     \x1b[38:5:86m║      \x1b[38:5:120m1. View Calendar           \x1b[38:5:86m║
     \x1b[38:5:86m║      \x1b[38:5:120m2. View Month Calendar     \x1b[38:5:86m║   
-    \x1b[38:5:86m║      \x1b[38:5:120m3. View Age                \x1b[38:5:86m║
-    \x1b[38:5:86m║      \x1b[38:5:120m4. View BirthYear          \x1b[38:5:86m║
+    \x1b[38:5:86m║      \x1b[38:5:120m3. Age Tracker             \x1b[38:5:86m║
     \x1b[38:5:86m║      \x1b[38:5:120m0. \x1b[38:5:196mExit                    \x1b[38:5:86m║
     \x1b[38:5:86m╠═════════════════════════════════╝""")
     choice = int(input("    ╚═> \x1b[38:5:120mChoice:\x1b[38:5:231m "))
@@ -77,9 +88,7 @@ def main():
     elif choice == 2:
         monthcalendar()
     elif choice == 3:
-        pass
-    elif choice == 4:
-        pass
+        age()
     elif choice == 0:
         clear()
         print(""" 

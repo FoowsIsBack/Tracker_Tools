@@ -23,7 +23,7 @@ def allcalendar():
     \x1b[38:5:86m╔═════════════════════════════════════╗
     \x1b[38:5:86m║     \x1b[38:5:120mSmart Calendar \x1b[38:5:196m& \x1b[38:5:120mAge Tracker    \x1b[38:5:86m║   
     \x1b[38:5:86m╚═════════════════════════════════════╝""")
-    year = int(input("      \x1b[38:5:120mEnter year calendar:\x1b[38:5:231m "))
+    year = int(input("     \x1b[38:5:120mEnter year calendar:\x1b[38:5:231m "))
     time.sleep(1.5)
     clear()
     print(f"""
@@ -43,7 +43,7 @@ def monthcalendar():
     \x1b[38:5:86m║     \x1b[38:5:120mSmart Calendar \x1b[38:5:196m& \x1b[38:5:120mAge Tracker    \x1b[38:5:86m║   
     \x1b[38:5:86m╚═════════════════════════════════════╝""")
     year1 = int(input("     \x1b[38:5:120mEnter year calendar:\x1b[38:5:231m "))
-    month1 = int(input("     \x1b[38:5:120mEnter number month calendar:\x1b[38:5:231m "))
+    month1 = int(input("     \x1b[38:5:120mEnter No. month calendar:\x1b[38:5:231m "))
     time.sleep(1.5)
     clear()
     print(f"""
@@ -75,8 +75,8 @@ def main():
     \x1b[38:5:86m╔═════════════════════════════════╗
     \x1b[38:5:86m║   \x1b[38:5:120mSmart Calendar \x1b[38:5:196m& \x1b[38:5:120mAge Tracker  \x1b[38:5:86m║   
     \x1b[38:5:86m╠═════════════════════════════════╣
-    \x1b[38:5:86m║      \x1b[38:5:120m1. View Calendar           \x1b[38:5:86m║
-    \x1b[38:5:86m║      \x1b[38:5:120m2. View Month Calendar     \x1b[38:5:86m║   
+    \x1b[38:5:86m║      \x1b[38:5:120m1. Calendar                \x1b[38:5:86m║
+    \x1b[38:5:86m║      \x1b[38:5:120m2. Month Calendar          \x1b[38:5:86m║   
     \x1b[38:5:86m║      \x1b[38:5:120m3. Age Tracker             \x1b[38:5:86m║
     \x1b[38:5:86m║      \x1b[38:5:120m0. \x1b[38:5:196mExit                    \x1b[38:5:86m║
     \x1b[38:5:86m╠═════════════════════════════════╝""")

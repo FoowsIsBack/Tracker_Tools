@@ -23,8 +23,8 @@ def allcalendar():
     \x1b[38:5:86m╔═════════════════════════════════════╗
     \x1b[38:5:86m║     \x1b[38:5:120mSmart Calendar \x1b[38:5:196m& \x1b[38:5:120mAge Tracker    \x1b[38:5:86m║   
     \x1b[38:5:86m╚═════════════════════════════════════╝""")
-    year = int(input("      \x1b[38:5:120mEnter Year for Calendar:\x1b[38:5:231m "))
-    time.sleep(2)
+    year = int(input("      \x1b[38:5:120mEnter year calendar:\x1b[38:5:231m "))
+    time.sleep(1.5)
     clear()
     print(f"""
 \x1b[38:5:86m═════════════════╦═════════════════════════════════════╦════════════════════════════════
@@ -33,15 +33,32 @@ def allcalendar():
     print(calendar.TextCalendar().formatyear(year))
     print("\x1b[38:5:86m════════════════════════════════════════════════════════════════════════════════════════")
     choice = input("\x1b[38:5:196mPress Enter to Go Back:\x1b[38:5:231m ")
-    time.sleep(2)
+    time.sleep(1.5)
     clear()
     main()
 
 def monthcalendar():
-    pass
-
+    print(f"""
+    \x1b[38:5:86m╔═════════════════════════════════════╗
+    \x1b[38:5:86m║     \x1b[38:5:120mSmart Calendar \x1b[38:5:196m& \x1b[38:5:120mAge Tracker    \x1b[38:5:86m║   
+    \x1b[38:5:86m╚═════════════════════════════════════╝""")
+    year1 = int(input("     \x1b[38:5:120mEnter year calendar:\x1b[38:5:231m "))
+    month1 = int(input("     \x1b[38:5:120mEnter number month calendar:\x1b[38:5:231m "))
+    time.sleep(1.5)
+    clear()
+    print(f"""
+\x1b[38:5:86m═══════════════════════════╗
+\x1b[38:5:91m   CALENDAR MONTH RESULT   \x1b[38:5:86m║   
+\x1b[38:5:86m═══════════════════════════╝\x1b[38:5:231m""")
+    print(calendar.month(year1, month1))
+    print("\x1b[38:5:86m════════════════════════════\x1b[38:5:231m")
+    choice = input("\x1b[38:5:196mPress Enter to Go Back:\x1b[38:5:231m ")
+    time.sleep(1.5)
+    clear()
+    main()
 
 def main():
+    clear()
     print(f""" 
     \x1b[38:5:86m╔═════════════════════════════════╗
     \x1b[38:5:86m║   \x1b[38:5:120mSmart Calendar \x1b[38:5:196m& \x1b[38:5:120mAge Tracker  \x1b[38:5:86m║   

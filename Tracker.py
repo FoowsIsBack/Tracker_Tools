@@ -21,7 +21,7 @@ def clear():
 def allcalendar():
     print(f"""
     \x1b[38:5:86m╔═════════════════════════════════════╗
-    \x1b[38:5:86m║     \x1b[38:5:120mSmart Calendar \x1b[38:5:196m& \x1b[38:5:120mAge Tracker    \x1b[38:5:86m║   
+    \x1b[38:5:86m║     \x1b[38:5:91mSmart Calendar \x1b[38:5:120m& \x1b[38:5:91mAge Tracker    \x1b[38:5:86m║  
     \x1b[38:5:86m╚═════════════════════════════════════╝""")
     year = int(input("     \x1b[38:5:120mEnter year calendar:\x1b[38:5:231m "))
     time.sleep(1.5)
@@ -40,7 +40,7 @@ def allcalendar():
 def monthcalendar():
     print(f"""
     \x1b[38:5:86m╔═════════════════════════════════════╗
-    \x1b[38:5:86m║     \x1b[38:5:120mSmart Calendar \x1b[38:5:196m& \x1b[38:5:120mAge Tracker    \x1b[38:5:86m║   
+    \x1b[38:5:86m║     \x1b[38:5:91mSmart Calendar \x1b[38:5:120m& \x1b[38:5:91mAge Tracker    \x1b[38:5:86m║ 
     \x1b[38:5:86m╚═════════════════════════════════════╝""")
     year1 = int(input("     \x1b[38:5:120mEnter year calendar:\x1b[38:5:231m "))
     month1 = int(input("     \x1b[38:5:120mEnter No. month calendar:\x1b[38:5:231m "))
@@ -58,28 +58,51 @@ def monthcalendar():
     main()
 
 def age():
+    global year, birth, result
     print(f"""
     \x1b[38:5:86m╔═════════════════════════════════════╗
-    \x1b[38;5;86m║        \x1b[38:5:120mWelcome to Age Tracker       \x1b[38;5;86m║ 
+    \x1b[38;5;86m║        \x1b[38:5:91mWelcome to Age Tracker       \x1b[38;5;86m║ 
     \x1b[38:5:86m╚═════════════════════════════════════╝""")
     year = int(input("     \x1b[38:5:120mEnter Year of Today:\x1b[38:5:231m "))
     birth = int(input("     \x1b[38:5:120mEnter your Birthyear:\x1b[38:5:231m "))
     result = year - birth
     time.sleep(1.5)
     clear()
-    print(result)
+    age_result()
+
+def age_result():
+    print(f"""
+    \x1b[38:5:86m╔═════════════════════════════════════╗
+    \x1b[38;5;86m║          \x1b[38:5:91mAge Tracker Result         \x1b[38;5;86m║ 
+    \x1b[38:5:86m╚═════╦═════════════════════════╦═════╝
+    \x1b[38:5:86m   ╔══╩═════════════════════════╩══╗
+    \x1b[38:5:86m   ║                               ║
+    \x1b[38:5:86m   ║     \x1b[38:5:120mYour Birthyear: \x1b[38:5:231m{birth:<10}\x1b[38;5;86m║
+    \x1b[38:5:86m   ║                               ║
+    \x1b[38:5:86m   ║     \x1b[38:5:120mYour age: \x1b[38:5:231m{result:<10}      \x1b[38;5;86m║
+    \x1b[38:5:86m   ║                               ║
+    \x1b[38:5:86m   ╚═══════════════════════════════╝""")
+    choice = input("        \x1b[38:5:196mPress Enter to Go Back:\x1b[38:5:231m ")
+    time.sleep(1.5)
+    clear()
+    main()
 
 def main():
     clear()
     print(f""" 
-    \x1b[38:5:86m╔═════════════════════════════════╗
-    \x1b[38:5:86m║   \x1b[38:5:120mSmart Calendar \x1b[38:5:196m& \x1b[38:5:120mAge Tracker  \x1b[38:5:86m║   
-    \x1b[38:5:86m╠═════════════════════════════════╣
-    \x1b[38:5:86m║      \x1b[38:5:120m1. Calendar                \x1b[38:5:86m║
-    \x1b[38:5:86m║      \x1b[38:5:120m2. Month Calendar          \x1b[38:5:86m║   
-    \x1b[38:5:86m║      \x1b[38:5:120m3. Age Tracker             \x1b[38:5:86m║
-    \x1b[38:5:86m║      \x1b[38:5:120m0. \x1b[38:5:196mExit                    \x1b[38:5:86m║
-    \x1b[38:5:86m╠═════════════════════════════════╝""")
+    \x1b[38:5:86m╔══════════════════════════════════╗
+    \x1b[38:5:86m║   \x1b[38:5:91mSmart Calendar \x1b[38:5:120m& \x1b[38:5:91mAge Tracker   \x1b[38:5:86m║   
+    \x1b[38:5:86m╠══════════════════════════════════╣
+    \x1b[38:5:86m║                                  \x1b[38:5:86m║          
+    \x1b[38:5:86m║      \x1b[38:5:120m1. Calendar                 \x1b[38:5:86m║
+    \x1b[38:5:86m║                                  \x1b[38:5:86m║
+    \x1b[38:5:86m║      \x1b[38:5:120m2. Month Calendar           \x1b[38:5:86m║
+    \x1b[38:5:86m║                                  \x1b[38:5:86m║   
+    \x1b[38:5:86m║      \x1b[38:5:120m3. Age Tracker              \x1b[38:5:86m║
+    \x1b[38:5:86m║                                  \x1b[38:5:86m║
+    \x1b[38:5:86m║      \x1b[38:5:120m0. \x1b[38:5:196mExit                     \x1b[38:5:86m║
+    \x1b[38:5:86m║                                  \x1b[38:5:86m║  
+    \x1b[38:5:86m╠══════════════════════════════════╝""")
     choice = int(input("    ╚═> \x1b[38:5:120mChoice:\x1b[38:5:231m "))
     clear()
 
